@@ -14,7 +14,7 @@ public class Price_Cal {
     static void discountCalculator(int product_quantity){
 
         int one_quantity_price = 100;       // Price of one quantity
-        if (product_quantity > 1000) {
+        if ((product_quantity*one_quantity_price) > 1000) {
             System.out.println("Final Price = " +(one_quantity_price * product_quantity)*90/100);  // To print discounted price
         }
         else {
@@ -24,7 +24,7 @@ public class Price_Cal {
 
     public static void main(String[] args) {
         
-        int pro_quantity = Integer.parseInt(args[0]);
+        int pro_quantity = Integer.parseInt(args[0]); // takes quantity from user
         discountCalculator(pro_quantity);
     }
 }
