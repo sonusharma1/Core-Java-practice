@@ -5,15 +5,23 @@ Program: Find the number in Array list
 */
 
 public class FindNumber {
-    
-    static void checkNumber(int num){
 
-        int [] numberList = {25, 65, 21, 89, 32, -2};
+    static void checkNumber(int num) {
+
+        int[] numberList = { 25, 65, 21, 89, 32, -2 };
         boolean result = false;
 
-        for (int i = 0; i < numberList.length; i++) {
-            
-            if (num == numberList[i]){ 
+        // for (int i = 0; i < numberList.length; i++) {
+
+        //     if (num == numberList[i]) {
+        //         result = true;
+        //         break;
+        //     }
+        // }
+
+        for (int i : numberList) {
+
+            if (num == numberList[i]) {
                 result = true;
                 break;
             }
@@ -21,8 +29,7 @@ public class FindNumber {
 
         if (result) {
             System.out.println("Number Found :)");
-        }
-        else{
+        } else {
             System.out.println("Number Not Found :(");
         }
 
